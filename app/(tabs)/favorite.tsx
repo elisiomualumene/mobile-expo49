@@ -9,12 +9,10 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
-import { Link } from "expo-router";
 import { MaterialIcons } from "@expo/vector-icons";
 
-export default function Home() {
+export default function Favorite() {
   const { height, width } = Dimensions.get("screen");
-
   return (
     <SafeAreaView>
       <StatusBar hidden barStyle={"light-content"} />
@@ -44,16 +42,14 @@ export default function Home() {
               borderRadius: 100,
             }}
           >
-            <Link href="/modal">
-              <MaterialIcons
-                name="menu"
-                style={{
-                  fontSize: 30,
-                  borderRadius: 100,
-                  textAlign: "center",
-                }}
-              />
-            </Link>
+            <MaterialIcons
+              name="menu"
+              style={{
+                fontSize: 30,
+                borderRadius: 100,
+                textAlign: "center",
+              }}
+            />
           </View>
           <Image source={require("../../assets/avatar.png")} />
         </View>
@@ -95,7 +91,7 @@ export default function Home() {
             }}
           >
             <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-              Todos produtos
+              All Featured
             </Text>
             <View
               style={{
@@ -124,7 +120,7 @@ export default function Home() {
                   padding: 5,
                 }}
               >
-                <Text style={{ color: "black", fontSize: 20 }}>ordenar</Text>
+                <Text style={{ color: "black", fontSize: 20 }}>Sort</Text>
                 <MaterialIcons
                   name="sort-by-alpha"
                   style={{
@@ -153,7 +149,7 @@ export default function Home() {
                   padding: 5,
                 }}
               >
-                <Text style={{ color: "black", fontSize: 20 }}>Filtrar</Text>
+                <Text style={{ color: "black", fontSize: 20 }}>Filter</Text>
                 <MaterialIcons
                   name="filter-alt"
                   style={{
@@ -174,7 +170,7 @@ export default function Home() {
                 flexDirection: "row",
                 justifyContent: "center",
                 alignItems: "center",
-                marginTop: 20,
+                marginVertical: 20,
                 backgroundColor: "white",
                 borderRadius: 10,
                 padding: 10,
@@ -189,167 +185,44 @@ export default function Home() {
               <View>
                 <Image source={require("../../assets/1.png")} />
                 <Text style={{ fontSize: 18, textAlign: "center" }}>
-                  Moda
+                  Fashion
                 </Text>
               </View>
               <View>
                 <Image source={require("../../assets/2.png")} />
-                <Text style={{ fontSize: 18, textAlign: "center" }}>Crianças</Text>
+                <Text style={{ fontSize: 18, textAlign: "center" }}>Kids</Text>
               </View>
               <View>
                 <Image source={require("../../assets/3.png")} />
                 <Text style={{ fontSize: 18, textAlign: "center" }}>
-                  Mulheres
+                  Womens
                 </Text>
               </View>
               <View>
                 <Image source={require("../../assets/4.png")} />
-                <Text style={{ fontSize: 18, textAlign: "center" }}>Homens</Text>
+                <Text style={{ fontSize: 18, textAlign: "center" }}>Mens</Text>
               </View>
               <View>
                 <Image source={require("../../assets/5.png")} />
                 <Text style={{ fontSize: 18, textAlign: "center" }}>
-                  Beleza
+                  Beauty
                 </Text>
               </View>
             </ScrollView>
           </View>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-              marginTop: 30,
-            }}
-          >
-            <Image
-              source={require("../../assets/shop.png")}
-              style={{ width: 390, height: 200, objectFit: "cover" }}
-            />
-          </View>
+
           <View
             style={{
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
-              marginTop: 30,
-              backgroundColor: "cornflowerblue",
-              borderRadius: 5,
-              padding: 8,
             }}
           >
-            <View>
-              <Text
-                style={{ color: "white", fontWeight: "bold", fontSize: 18 }}
-              >
-                Destaques do dia
-              </Text>
-              <Text style={{ color: "white", fontWeight: "400", fontSize: 14 }}>
-                22h 55m 23s restante
-              </Text>
-            </View>
-            <TouchableOpacity>
-              <View
-                style={{
-                  borderWidth: 2,
-                  borderColor: "white",
-                  borderRadius: 8,
-                  flexDirection: "row",
-                  alignItems: "center",
-                }}
-              >
-                <Text
-                  style={{
-                    color: "white",
-                    fontWeight: "bold",
-                    fontSize: 16,
-                    minWidth: 80,
-                    textAlign: "center",
-                  }}
-                >
-                  Ver todos
-                </Text>
-                <MaterialIcons
-                  name="arrow-right-alt"
-                  style={{ fontSize: 30, color: "white" }}
-                />
-              </View>
-            </TouchableOpacity>
-          </View>
-
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{ marginVertical: 40, gap: 10 }}
-          >
             <View
               style={{
-                width: 170,
+                width: 180,
                 backgroundColor: "white",
-                borderRadius: 5,
-                marginBottom: 100,
-                shadowColor: "gray",
-                shadowOffset: { width: 1, height: 2 },
-                shadowOpacity: 0.9,
-                elevation: 2,
-              }}
-            >
-              <Image
-                source={require("../../assets/shoes.png")}
-                style={{ borderRadius: 5 }}
-              />
-              <Text style={{ fontSize: 22, fontWeight: "bold" }}>
-                HRX Tenis
-              </Text>
-              <Text style={{ marginTop: 1, fontWeight: "500" }}>
-                Uma pequena descrição do produto em questão
-              </Text>
-              <Text style={{ fontSize: 22, fontWeight: "bold", marginTop: 10 }}>
-                150.000,00KZ{" "}
-                <Text
-                  style={{ fontSize: 15, fontWeight: "bold", color: "red" }}
-                >
-                  50% off
-                </Text>
-              </Text>
-            </View>
-
-            <View
-              style={{
-                width: 170,
-                backgroundColor: "white",
-                borderRadius: 5,
-                marginBottom: 100,
-                shadowColor: "gray",
-                shadowOffset: { width: 1, height: 2 },
-                shadowOpacity: 0.9,
-                elevation: 2,
-              }}
-            >
-              <Image
-                source={require("../../assets/shirt.png")}
-                style={{ borderRadius: 5, height: 130, objectFit: "cover" }}
-              />
-              <Text style={{ fontSize: 22, fontWeight: "bold" }}>
-                Shirt
-              </Text>
-              <Text style={{ marginTop: 1, fontWeight: "500" }}>
-                Uma pequena descrição do produto em questão
-              </Text>
-              <Text style={{ fontSize: 22, fontWeight: "bold", marginTop: 10 }}>
-                150.000,00KZ{" "}
-                <Text
-                  style={{ fontSize: 15, fontWeight: "bold", color: "red" }}
-                >
-                  50% off
-                </Text>
-              </Text>
-            </View>
-
-            <View
-              style={{
-                width: 170,
-                backgroundColor: "white",
-                borderRadius: 5,
+                borderRadius: 10,
                 marginBottom: 100,
                 shadowColor: "gray",
                 shadowOffset: { width: 1, height: 2 },
@@ -359,7 +232,12 @@ export default function Home() {
             >
               <Image
                 source={require("../../assets/dress.png")}
-                style={{ borderRadius: 5, height: 130, objectFit: "cover" }}
+                style={{
+                  borderRadius: 10,
+                  width: "auto",
+                  height: 300,
+                  objectFit: "cover",
+                }}
               />
               <Text style={{ fontSize: 22, fontWeight: "bold" }}>
                 Black Dress
@@ -368,15 +246,113 @@ export default function Home() {
                 Uma pequena descrição do produto em questão
               </Text>
               <Text style={{ fontSize: 22, fontWeight: "bold", marginTop: 10 }}>
-                150.000,00KZ{" "}
-                <Text
-                  style={{ fontSize: 15, fontWeight: "bold", color: "red" }}
-                >
-                  50% off
-                </Text>
+                600.000,00KZ{" "}
               </Text>
             </View>
-          </ScrollView>
+
+            <View
+              style={{
+                width: 180,
+                backgroundColor: "white",
+                borderRadius: 10,
+                marginBottom: 100,
+                shadowColor: "gray",
+                shadowOffset: { width: 1, height: 2 },
+                shadowOpacity: 0.9,
+                elevation: 2,
+              }}
+            >
+              <Image
+                source={require("../../assets/shirt.png")}
+                style={{
+                  borderRadius: 10,
+                  width: "auto",
+                  height: 300,
+                  objectFit: "cover",
+                }}
+              />
+              <Text style={{ fontSize: 22, fontWeight: "bold" }}>
+                Mens Stary
+              </Text>
+              <Text style={{ marginTop: 1, fontWeight: "500" }}>
+                Uma pequena descrição do produto em questão
+              </Text>
+              <Text style={{ fontSize: 22, fontWeight: "bold", marginTop: 10 }}>
+                300.000,00KZ{" "}
+              </Text>
+            </View>
+          </View>
+
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginTop: -70,
+            }}
+          >
+            <View
+              style={{
+                width: 180,
+                backgroundColor: "white",
+                borderRadius: 10,
+                marginBottom: 100,
+                shadowColor: "gray",
+                shadowOffset: { width: 1, height: 2 },
+                shadowOpacity: 0.9,
+                elevation: 2,
+              }}
+            >
+              <Image
+                source={require("../../assets/shirt.png")}
+                style={{
+                  borderRadius: 10,
+                  width: "auto",
+                  height: 300,
+                  objectFit: "cover",
+                }}
+              />
+              <Text style={{ fontSize: 22, fontWeight: "bold" }}>Shirt</Text>
+              <Text style={{ marginTop: 1, fontWeight: "500" }}>
+                Uma pequena descrição do produto em questão
+              </Text>
+              <Text style={{ fontSize: 22, fontWeight: "bold", marginTop: 10 }}>
+                600.000,00KZ{" "}
+              </Text>
+            </View>
+
+            <View
+              style={{
+                width: 180,
+                backgroundColor: "white",
+                borderRadius: 10,
+                marginBottom: 100,
+                shadowColor: "gray",
+                shadowOffset: { width: 1, height: 2 },
+                shadowOpacity: 0.9,
+                elevation: 2,
+              }}
+            >
+              <Image
+                source={require("../../assets/dress.png")}
+                style={{
+                  borderRadius: 10,
+                  width: "auto",
+                  height: 300,
+                  objectFit: "cover",
+                }}
+              />
+              <Text style={{ fontSize: 22, fontWeight: "bold" }}>
+                Womens Dress
+              </Text>
+              <Text style={{ marginTop: 1, fontWeight: "500" }}>
+                Uma pequena descrição do produto em questão
+              </Text>
+              <Text style={{ fontSize: 22, fontWeight: "bold", marginTop: 10 }}>
+                380.000,00KZ{" "}
+              </Text>
+            </View>
+          </View>
         </ScrollView>
       </View>
     </SafeAreaView>

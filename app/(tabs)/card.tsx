@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
 
-export default function Modal() {
+export default function Card() {
   return (
     <View>
-      <Text>Modal</Text>
+      <Text>Card screen</Text>
     </View>
   );
 }
