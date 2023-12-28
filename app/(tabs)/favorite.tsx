@@ -15,12 +15,13 @@ export default function Favorite() {
   const { height, width } = Dimensions.get("screen");
   return (
     <SafeAreaView>
-      <StatusBar hidden barStyle={"light-content"} />
+      <StatusBar  />
       <View
         style={{
           padding: 10,
           backgroundColor: "#FDFDFD",
           height,
+          paddingTop: 30
         }}
       >
         <View
@@ -77,7 +78,7 @@ export default function Favorite() {
           />
           <TextInput
             style={{ fontSize: 20 }}
-            placeholder="search any product"
+            placeholder="pesquisar pelo produto"
           />
         </View>
         <ScrollView showsVerticalScrollIndicator={false}>
@@ -91,7 +92,7 @@ export default function Favorite() {
             }}
           >
             <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-              All Featured
+              Todos produtos
             </Text>
             <View
               style={{
@@ -120,7 +121,7 @@ export default function Favorite() {
                   padding: 5,
                 }}
               >
-                <Text style={{ color: "black", fontSize: 20 }}>Sort</Text>
+                <Text style={{ color: "black", fontSize: 20 }}>ordenar</Text>
                 <MaterialIcons
                   name="sort-by-alpha"
                   style={{
@@ -149,7 +150,7 @@ export default function Favorite() {
                   padding: 5,
                 }}
               >
-                <Text style={{ color: "black", fontSize: 20 }}>Filter</Text>
+                <Text style={{ color: "black", fontSize: 20 }}>Filtrar</Text>
                 <MaterialIcons
                   name="filter-alt"
                   style={{
@@ -185,27 +186,27 @@ export default function Favorite() {
               <View>
                 <Image source={require("../../assets/1.png")} />
                 <Text style={{ fontSize: 18, textAlign: "center" }}>
-                  Fashion
+                  Moda
                 </Text>
               </View>
               <View>
                 <Image source={require("../../assets/2.png")} />
-                <Text style={{ fontSize: 18, textAlign: "center" }}>Kids</Text>
+                <Text style={{ fontSize: 18, textAlign: "center" }}>Crianças</Text>
               </View>
               <View>
                 <Image source={require("../../assets/3.png")} />
                 <Text style={{ fontSize: 18, textAlign: "center" }}>
-                  Womens
+                  Mulheres
                 </Text>
               </View>
               <View>
                 <Image source={require("../../assets/4.png")} />
-                <Text style={{ fontSize: 18, textAlign: "center" }}>Mens</Text>
+                <Text style={{ fontSize: 18, textAlign: "center" }}>Homens</Text>
               </View>
               <View>
                 <Image source={require("../../assets/5.png")} />
                 <Text style={{ fontSize: 18, textAlign: "center" }}>
-                  Beauty
+                  Beleza
                 </Text>
               </View>
             </ScrollView>

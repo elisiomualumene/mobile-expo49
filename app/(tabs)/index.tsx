@@ -17,12 +17,13 @@ export default function Home() {
 
   return (
     <SafeAreaView>
-      <StatusBar hidden barStyle={"light-content"} />
+      <StatusBar/>
       <View
         style={{
           padding: 10,
           backgroundColor: "#FDFDFD",
           height,
+          paddingTop: 30
         }}
       >
         <View
@@ -81,7 +82,7 @@ export default function Home() {
           />
           <TextInput
             style={{ fontSize: 20 }}
-            placeholder="search any product"
+            placeholder="pesquisar pelo produto"
           />
         </View>
         <ScrollView showsVerticalScrollIndicator={false}>
